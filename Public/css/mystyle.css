@@ -1,0 +1,14 @@
+@charset "utf-8";
+a.button-collapse.top-nav {
+	left: -2%;
+	font-size: 36px;
+	z-index: 999;
+	line-height: 80px;
+}
+nav.top-nav a.page-title {
+	line-height: 80px;
+	font-size: xx-large;
+}
+nav.top-nav {
+	height: 80px;
+}
