@@ -11,6 +11,5 @@ class IndexController extends Controller {
 
         $this->assign('list',$list);
         $this -> display();
-//        var_dump($list);
     }
 }
