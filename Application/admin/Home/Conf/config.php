@@ -8,5 +8,7 @@ return array(
     'DB_USER'               =>  'root',      // 用户名
     'DB_PWD'                =>  'root',          // 密码
     'DB_PORT'               =>  '3306',        // 端口
-//    'SHOW_PAGE_TRACE' =>true, // 显示页面Trace信息
+    'SHOW_PAGE_TRACE' => true, // 显示页面Trace信息
+    URL_CASE_INSENSITIVE => false //大写自动转小写
 );
+

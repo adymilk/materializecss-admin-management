@@ -1,14 +1,28 @@
 @charset "utf-8";
 a.button-collapse.top-nav {
-	left: -2%;
+	left: -3%;
 	font-size: 36px;
 	z-index: 999;
 	line-height: 80px;
 }
 nav.top-nav a.page-title {
 	line-height: 80px;
-	font-size: xx-large;
+    font-size: x-large;
 }
 nav.top-nav {
 	height: 80px;
+}
+
+.pagination li.active {
+	background-color: rgb(238, 110, 115);
+}
+
+table tr td {
+    line-height: 50px;
+    height: 50px;
+}
+
+#keywords {
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }

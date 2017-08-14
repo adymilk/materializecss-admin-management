@@ -14,7 +14,10 @@
   <nav class="light-red  lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">古韵课堂</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/ThinkPHP_study/admin.php" target="_blank">前往后台</a></li>
+        <li class="active"><a href="/ThinkPHP_study/index.php">网站主页</a></li>
+        <li><a href="/ThinkPHP_study/index.php/Home/Dictionary">新华字典</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="/ThinkPHP_study/index.php/Home/About">关于我们</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -81,7 +84,7 @@
     </div>
     <br><br>
   </div>
-  
+
   <footer class="page-footer orange">
     <div class="container">
       <div class="row">

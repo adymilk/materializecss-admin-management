@@ -1,0 +1,20 @@
+<extend name="Temp/base"/>
+
+<block name="content">
+    <main>
+        <div id="editor" style="overflow: hidden">
+            <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+        </div>
+    </main>
+    <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+    <script type="text/javascript" src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+    <script type="text/javascript">
+        var E = window.wangEditor
+        var editor = new E('#editor')
+        // 或者 var editor = new E( document.getElementById('#editor') )
+        editor.create()
+    </script>
+
+</block>
+
+
