@@ -461,7 +461,7 @@
       <workItem from="1502774580900" duration="7975000" />
       <workItem from="1502784148101" duration="7820000" />
       <workItem from="1502793121068" duration="125000" />
-      <workItem from="1502793399142" duration="2405000" />
+      <workItem from="1502793399142" duration="2466000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1502159051911</created>
@@ -491,11 +491,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502801197695</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加富文本编辑器">
+      <created>1502801967411</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1502801967411</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98404000" />
+    <option name="totallyTimeSpent" value="98465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
@@ -538,7 +545,8 @@
     <MESSAGE value="测试&#10;" />
     <MESSAGE value="后台管理页面添加分页功能" />
     <MESSAGE value="增加富文本编辑器" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加富文本编辑器" />
+    <MESSAGE value="添加富文本编辑器" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加富文本编辑器" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

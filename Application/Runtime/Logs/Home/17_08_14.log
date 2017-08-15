@@ -1,0 +1,20 @@
+[ 2017-08-14T13:35:32+08:00 ] ::1 /ThinkPHP_study/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+
+[ 2017-08-14T13:35:50+08:00 ] ::1 /ThinkPHP_study/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+
+[ 2017-08-14T13:35:50+08:00 ] ::1 /ThinkPHP_study/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000030s ]
+
+[ 2017-08-14T13:39:28+08:00 ] 127.0.0.1 /ThinkPHP_study/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+
