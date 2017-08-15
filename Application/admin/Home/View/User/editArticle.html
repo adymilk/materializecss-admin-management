@@ -1,0 +1,48 @@
+<extend name="Temp/base"/>
+
+<block name="content">
+    <main>
+        <volist name="list" id="vo">
+            <form action="__ROOT__/admin.php/Home/User/updateArticle?id={$vo.id}" method="post">
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" name="title" type="text" class="validate" value="{$vo.title}">
+                        <label>标题</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled value="{$vo.name}" name="author" id="email" type="text" class="validate">
+                        <label>作者</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea name="content" id="textarea1" class="materialize-textarea">{$vo.content}</textarea>
+                        <label for="textarea1">文本域</label>
+                    </div>
+                </div>
+                <!--<div id="editor" style="overflow: hidden">-->
+                <!--<p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>-->
+                <!--</div>-->
+                <br>
+                <div style="float: right">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">提交
+                        <i class="material-icons right">send</i></button>
+                </div>
+            </form>
+        </volist>
+    </main>
+    <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+    <!--<script type="text/javascript" src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>-->
+    <!--<script type="text/javascript">-->
+    <!--var E = window.wangEditor-->
+    <!--var editor = new E('#editor')-->
+    <!--// 或者 var editor = new E( document.getElementById('#editor') )-->
+    <!--editor.create()-->
+    <!--</script>-->
+
+</block>
+
+

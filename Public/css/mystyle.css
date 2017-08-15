@@ -26,3 +26,7 @@ table tr td {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
+
+.side-nav li {
+    font-size: x-large;
+}

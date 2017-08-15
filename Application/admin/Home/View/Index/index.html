@@ -12,20 +12,23 @@
                         <option value="3">选项 3</option>
                     </select>
                 </td>
-                <td style="float: right"><b>关键词:</b></td>
-                <td>
-                    <input id="keywords" type="text" placeholder="关键词" style="text-align: center; margin-bottom: 0px">
-                </td>
-                <td><a class="waves-effect waves-light btn"><i class="material-icons left">search</i>查询</a></td>
+                <form action="__ROOT__/admin.php/Home/Search/index" method="get">
+                    <td style="float: right"><b>关键词:</b></td>
+                    <td>
+                        <input name="keywords" id="keywords" type="text" placeholder="关键词"
+                               style="text-align: center; margin-bottom: 0px">
+                    </td>
+                    <td><input type="submit" name="submit" value="搜索" class="red btn"></td>
+                </form>
             </tr>
 
         </table>
         <table style="width: 30%;" class="hide-on-small-only">
             <tr>
-                <td><a href="__ROOT__/admin.php/Home/User/index?action=add"><i class="material-icons">add</i>新增文章</a>
+                <td><a href="__ROOT__/admin.php/Home/User/newAddArticle"><i class="material-icons">add</i>新增文章</a>
                 </td>
-                <td><i class="material-icons">delete</i>批量删除</td>
-                <td><i class="material-icons">update</i>更新排序</td>
+                <td><a href="#!"><i class="material-icons">delete</i>批量删除</a></td>
+                <td><a href="#!"><i class="material-icons">update</i>更新排序</a></td>
             </tr>
 
         </table>
@@ -37,7 +40,7 @@
                 <thead>
                 <tr>
                     <th>
-                        <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked"/><label
+                        <input onclick="swapCheck()" type="checkbox" class="filled-in" id="filled-in-box"/><label
                             for="filled-in-box"></label>
                     </th>
                     <th>ID</th>
@@ -51,27 +54,40 @@
                 <volist name="list" id="vo">
                     <tr>
                         <td>
-                            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" /><label for="filled-in-box"></label>
+                            <input type="checkbox" class="filled-in" id="{$vo.id}"/><label for="{$vo.id}"></label>
                         </td>
                         <td>{$vo.id}</td>
                         <td>{$vo.created_at}</td>
-                        <td><a href="#!">{$vo.title}</a></td>
+                        <td><a style="color: #000000" href="__ROOT__/admin.php/Home/User/reviewArticle?id={$vo.id}">{$vo.title}</a>
+                        </td>
                         <td>{$vo.name}</td>
                         <td>1000+</td>
-                        <td><!-- Dropdown Trigger -->
-                            <a class='dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1'><i class="material-icons">more_vert</i></a>
+                        <td>
+                            <a href="__ROOT__/admin.php/Home/User/deleteArticle?id={$vo.id}"><i class="material-icons">delete</i>删除</a>&nbsp;&nbsp;
+                            <a href="__ROOT__/admin.php/Home/User/editArticle?id={$vo.id}"><i class="material-icons">edit</i>编辑</a>
+                        </td>
 
-                            <!-- Dropdown Structure -->
-                            <ul id='dropdown1' class='dropdown-content'>
-
-                                <li><a href="#!"> <i class="material-icons left">visibility</i>查看</a></li>
-                                <li><a href="#!"> <i class="material-icons left">edit</i>编辑</a></li>
-                                <li><a href="#!"><i class="material-icons left">delete</i>删除</a></li>
-                            </ul></td>
                     </tr>
                 </volist>
 
             </table>
+            <script>
+                //checkbox 全选/取消全选
+                var isCheckAll = false;
+                function swapCheck() {
+                    if (isCheckAll) {
+                        $("input[type='checkbox']").each(function () {
+                            this.checked = false;
+                        });
+                        isCheckAll = false;
+                    } else {
+                        $("input[type='checkbox']").each(function () {
+                            this.checked = true;
+                        });
+                        isCheckAll = true;
+                    }
+                }
+            </script>
             <ul class="pagination">
                 {$page}
             </ul>

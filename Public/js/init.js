@@ -25,5 +25,6 @@
           stopPropagation: false // Stops event propagation
         }
     );
+
   }); // end of document ready
 })(jQuery); // end of jQuery name space

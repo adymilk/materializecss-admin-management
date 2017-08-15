@@ -15,32 +15,42 @@
 </head>
 <body>
 <header>
-    <nav class="top-nav red">
-        <div class="nav-wrapper container" style="font-size: small">
-            <a class="page-title hide-on-large-only" href="__ROOT__/admin.php">后台管理</a>
-
-            <a class="page-title circle hide-on-small-only" href="__ROOT__/index.php">网站首页</a>
-            <ul class="right hide-on-small-only">
-                <li><a class="page-title" href="/">管理员</a></li>
-                <li><a class="page-title" href="/">修改密码</a></li>
-            </ul>
-
-
-        </div>
+    <div class="">
+        <nav class="nav top-nav red" style="padding-left: 5px; padding-right: 5px">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo hide-on-small-only"><i class="material-icons">cloud</i>Logo</a>
+                <ul class="right hide-on-med-and-down" id="top-menu">
+                    <li><a href="#!"><i class="material-icons">search</i></a></li>
+                    <li><a href="#!"><i class="material-icons">view_module</i></a></li>
+                    <li><a href="#!"><i class="material-icons">refresh</i></a></li>
+                    <li><a href="#!"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
     </nav>
+    </div>
     <div class="container"><a href="#" data-activates="nav-mobile"
                               class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i
             class="material-icons">menu</i></a></div>
 
     <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0px);">
         <div class="red" style="line-height: 120px; text-align: center; color: white; font-size: xx-large">
-            <a href="_ROOT__/admin.php">后台管理</a>
+            管理员
         </div>
 
         <li><a class="subheader">常用操作</a></li>
-        <li class="bold active"><a href="#" class="waves-effect waves-teal"><i class="material-icons">book</i>文章管理</a>
+        <li class="bold active"><a href="__ROOT__/admin.php" class="waves-effect waves-teal"><i class="material-icons">book</i>文章管理</a>
         </li>
-        <li class="bold"><a href="#" class="waves-effect waves-teal"><i class="material-icons">format_list_bulleted</i>分类管理</a>
+        <li class="bold"><a href="#" class="waves-effect waves-teal">
+            <i class="material-icons">format_list_bulleted</i>分类管理</a>
+        </li>
+        <li><a class="subheader">系统管理</a></li>
+        <li class="bold active"><a href="#" class="waves-effect waves-teal"><i class="material-icons">book</i>系统设置</a>
+        </li>
+        <li class="bold active"><a href="#" class="waves-effect waves-teal"><i class="material-icons">book</i>清除缓存</a>
+        </li>
+        <li class="bold active"><a href="#" class="waves-effect waves-teal"><i class="material-icons">book</i>数据备份</a>
+        </li>
+        <li class="bold active"><a href="#" class="waves-effect waves-teal"><i class="material-icons">book</i>数据还原</a>
         </li>
         <li><a class="subheader">高级操作</a></li>
         <li class="no-padding">
