@@ -54,10 +54,13 @@ class UserController extends Controller
     public function reviewArticle()
     {
         //查看文章
-        if ($_GET[id]) {
+        if (!empty($_GET[id])) {
             $articleId = $_GET[id];
             $Data = M('poets');
-            $list = $Data->join('poetries on poets.id = poetries.poet_id')->where('poetries.id=' . $articleId)->select();
+            $list = $Data
+                ->join('poetries on poets.id = poetries.poet_id')
+                ->where('poetries.id=' . $articleId)
+                ->select();
             $this->assign('list', $list);
             $this->display();
         }

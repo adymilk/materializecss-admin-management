@@ -18,7 +18,12 @@ class IndexController extends Controller {
         $Page->setConfig('theme', '%HEADER% %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%');
         $show = $Page->show();// 分页显示输出
         // 进行分页数据查询
-        $list = $Data->join('poetries on poets.id = poetries.poet_id')->where()->order('poetries.updated_at desc')->limit($Page->firstRow . ',' . $Page->listRows)->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
+        $list = $Data
+            ->join('poetries on poets.id = poetries.poet_id')
+            ->where()
+            ->order('poetries.updated_at desc')
+            ->limit($Page->firstRow . ',' . $Page->listRows)
+            ->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
         $this->assign('list', $list);// 赋值数据集
         $this->assign('page', $show);// 赋值分页输出
         $this->display(); // 输出模板

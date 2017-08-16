@@ -34,7 +34,12 @@ class SearchController extends Controller
                 ->select();
             $this->assign('page', $show);// 赋值分页输出
             $this->assign('list', $list);
-            $this->display();
+//            var_dump($list);
+            if (!empty($list)) {
+                $this->display();
+            } else if (empty($list)) {
+                $this->error('不存在相关记录');
+            }
         } else {
             $this->error('搜索内容不能为空！');
         }

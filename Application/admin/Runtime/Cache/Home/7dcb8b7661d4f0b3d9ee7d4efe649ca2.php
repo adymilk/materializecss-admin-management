@@ -15,22 +15,20 @@
 </head>
 <body>
 <header>
-    <div class="">
         <nav class="nav top-nav red" style="padding-left: 5px; padding-right: 5px">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo hide-on-small-only"><i class="material-icons">cloud</i>Logo</a>
-                <ul class="right hide-on-med-and-down" id="top-menu">
-                    <li><a href="#!"><i class="material-icons">search</i></a></li>
+                <a href="/ThinkPHP_study/index.php" class="brand-logo hide-on-small-only"><i class="material-icons">cloud</i>Logo</a>
+                <ul class="right " id="top-menu">
+                    <li data-target="modal1" class="modal-trigger"><a href="#!"><i class="material-icons">search</i></a></li>
                     <li><a href="#!"><i class="material-icons">view_module</i></a></li>
                     <li><a href="#!"><i class="material-icons">refresh</i></a></li>
                     <li><a href="#!"><i class="material-icons">more_vert</i></a></li>
                 </ul>
             </div>
     </nav>
-    </div>
-    <div class="container"><a href="#" data-activates="nav-mobile"
-                              class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i
-            class="material-icons">menu</i></a></div>
+    <div class="container">
+        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+            <i class="material-icons">menu</i></a></div>
 
     <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0px);">
         <div class="red" style="line-height: 120px; text-align: center; color: white; font-size: xx-large">
@@ -38,12 +36,14 @@
         </div>
 
         <li><a class="subheader">常用操作</a></li>
-        <li class="bold active"><a href="/ThinkPHP_study/admin.php" class="waves-effect waves-teal"><i
-                    class="material-icons">book</i>文章管理</a>
+        <li class="bold active"><a href="/ThinkPHP_study/admin.php" class="waves-effect waves-teal"><i class="material-icons">book</i>文章管理</a>
         </li>
         <li class="bold"><a href="#" class="waves-effect waves-teal">
-            <i class="material-icons">format_list_bulleted</i>分类管理</a>
+            <i class="material-icons">comment</i>评论管理</a>
         </li>
+
+        <li class="bold"><a href="/ThinkPHP_study/admin.php/Home/User/newAddArticle"><i class="material-icons">add</i>新增文章</a></li>
+
         <li><a class="subheader">系统管理</a></li>
         <li class="bold active"><a href="#" class="waves-effect waves-teal"><i class="material-icons">book</i>系统设置</a>
         </li>
@@ -89,6 +89,25 @@
     </ul>
 </header>
 
+<!--<button data-target="modal1" class="btn modal-trigger">Modal</button>-->
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <form action="/ThinkPHP_study/admin.php/Home/Search/index" method="get">
+        <h4>搜索</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="keywords" id="text" type="text" class="validate">
+                <label for="text">输入关键词</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="waves-light btn" type="submit" name="submit"><i class="material-icons right">search</i>搜索</button>
+    </div>
+    </form>
+</div>
+
 
 
     <main>
@@ -116,8 +135,7 @@
         </table>
         <table style="width: 30%;" class="hide-on-small-only">
             <tr>
-                <td><a href="/ThinkPHP_study/admin.php/Home/User/newAddArticle"><i
-                            class="material-icons">add</i>新增文章</a>
+                <td><a href="/ThinkPHP_study/admin.php/Home/User/newAddArticle"><i class="material-icons">add</i>新增文章</a>
                 </td>
                 <td><a href="#!"><i class="material-icons">delete</i>批量删除</a></td>
                 <td><a href="#!"><i class="material-icons">update</i>更新排序</a></td>
@@ -145,22 +163,18 @@
                 </thead>
                 <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                         <td>
-                            <input type="checkbox" class="filled-in" id="<?php echo($vo["id"]); ?>"/><label
-                                for="<?php echo($vo["id"]); ?>"></label>
+                            <input type="checkbox" class="filled-in" id="<?php echo ($vo["id"]); ?>"/><label for="<?php echo ($vo["id"]); ?>"></label>
                         </td>
                         <td><?php echo ($vo["id"]); ?></td>
                         <td><?php echo ($vo["created_at"]); ?></td>
-                    <td><a style="color: #000000"
-                           href="/ThinkPHP_study/admin.php/Home/User/reviewArticle?id=<?php echo($vo["id"]); ?>"><?php echo($vo["title"]); ?></a>
-                    </td>
+                        <td><a style="color: #000000" href="/ThinkPHP_study/admin.php/Home/User/reviewArticle?id=<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
+                        </td>
                         <td><?php echo ($vo["name"]); ?></td>
                         <td>1000+</td>
-                    <td>
-                        <a href="/ThinkPHP_study/admin.php/Home/User/deleteArticle?id=<?php echo($vo["id"]); ?>"><i
-                                class="material-icons">delete</i>删除</a>&nbsp;&nbsp;
-                        <a href="/ThinkPHP_study/admin.php/Home/User/editArticle?id=<?php echo($vo["id"]); ?>"><i
-                                class="material-icons">edit</i>编辑</a>
-                    </td>
+                        <td>
+                            <a href="/ThinkPHP_study/admin.php/Home/User/deleteArticle?id=<?php echo ($vo["id"]); ?>"><i class="material-icons">delete</i>删除</a>&nbsp;&nbsp;
+                            <a href="/ThinkPHP_study/admin.php/Home/User/editArticle?id=<?php echo ($vo["id"]); ?>"><i class="material-icons">edit</i>编辑</a>
+                        </td>
 
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 

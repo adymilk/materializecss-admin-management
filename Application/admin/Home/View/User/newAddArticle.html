@@ -2,15 +2,20 @@
 
 <block name="content">
     <main>
-        <form action="__ROOT__/admin.php/Home/User/publishArticle" method="get">
+        <div class="container">
+            <br>
             <div class="row">
-                <div class="input-field col s12 m6">
+
+
+                <form action="__ROOT__/admin.php/Home/User/publishArticle" method="get">
+            <div class="row">
+                <div class="input-field col s12">
                     <input id="email" name="title" type="text" class="validate">
                     <label>标题</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12 m6">
+                <div class="input-field col s12">
                     <input name="author" id="email" type="text" class="validate">
                     <label>作者</label>
                 </div>
@@ -30,6 +35,8 @@
                     <i class="material-icons right">send</i></button>
             </div>
         </form>
+            </div>
+        </div>
     </main>
     <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
     <!--<script type="text/javascript" src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>-->

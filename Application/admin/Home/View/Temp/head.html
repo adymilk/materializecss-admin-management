@@ -15,22 +15,22 @@
 </head>
 <body>
 <header>
-    <div class="">
         <nav class="nav top-nav red" style="padding-left: 5px; padding-right: 5px">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo hide-on-small-only"><i class="material-icons">cloud</i>Logo</a>
-                <ul class="right hide-on-med-and-down" id="top-menu">
-                    <li><a href="#!"><i class="material-icons">search</i></a></li>
+                <a href="__ROOT__/index.php" class="brand-logo hide-on-small-only"><i class="material-icons">cloud</i>Logo</a>
+                <ul class="right " id="top-menu">
+                    <li data-target="modal1" class="modal-trigger"><a href="#!"><i class="material-icons">search</i></a>
+                    </li>
                     <li><a href="#!"><i class="material-icons">view_module</i></a></li>
                     <li><a href="#!"><i class="material-icons">refresh</i></a></li>
                     <li><a href="#!"><i class="material-icons">more_vert</i></a></li>
                 </ul>
             </div>
     </nav>
-    </div>
-    <div class="container"><a href="#" data-activates="nav-mobile"
-                              class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i
-            class="material-icons">menu</i></a></div>
+    <div class="container">
+        <a href="#" data-activates="nav-mobile"
+           class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+            <i class="material-icons">menu</i></a></div>
 
     <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0px);">
         <div class="red" style="line-height: 120px; text-align: center; color: white; font-size: xx-large">
@@ -41,8 +41,12 @@
         <li class="bold active"><a href="__ROOT__/admin.php" class="waves-effect waves-teal"><i class="material-icons">book</i>文章管理</a>
         </li>
         <li class="bold"><a href="#" class="waves-effect waves-teal">
-            <i class="material-icons">format_list_bulleted</i>分类管理</a>
+            <i class="material-icons">comment</i>评论管理</a>
         </li>
+
+        <li class="bold"><a href="__ROOT__/admin.php/Home/User/newAddArticle"><i class="material-icons">add</i>新增文章</a>
+        </li>
+
         <li><a class="subheader">系统管理</a></li>
         <li class="bold active"><a href="#" class="waves-effect waves-teal"><i class="material-icons">book</i>系统设置</a>
         </li>
@@ -87,3 +91,23 @@
         </li>
     </ul>
 </header>
+
+<!--<button data-target="modal1" class="btn modal-trigger">Modal</button>-->
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <form action="__ROOT__/admin.php/Home/Search/index" method="get">
+            <h4>搜索</h4>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="keywords" id="text" type="text" class="validate">
+                    <label for="text">输入关键词</label>
+                </div>
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button class="waves-light btn" type="submit" name="submit"><i class="material-icons right">search</i>搜索
+        </button>
+    </div>
+    </form>
+</div>

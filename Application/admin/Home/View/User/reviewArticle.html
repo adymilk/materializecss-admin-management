@@ -11,12 +11,13 @@
 
                             <span class="card-title">{$vo.title}</span><span>作者：{$vo.name}</span>
                             <p>{$vo.content}</p>
+                        </volist>
                     </div>
                     <div class="card-action">
                         <a href="__ROOT__/admin.php/Home/User/reviewArticle?lid={$vo.id}">上一首</a>
                         <a href="__ROOT__/admin.php/Home/User/reviewArticle?rid={$vo.id}">下一首</a>
                     </div>
-                    </volist>
+
                 </div>
             </div>
         </div>
